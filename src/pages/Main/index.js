@@ -20,19 +20,14 @@ import {
 } from './styles';
 
 export default class Main extends Component {
-  // eslint-disable-next-line react/sort-comp
-  static navigationOptions = {
-    title: 'Usuários',
-  };
-
-  static propTypes = {
-    navigation: PropType.shape({ navigate: PropType.func }).isRequired,
-  };
-
   state = {
     newUSer: '',
     users: [],
     loading: false,
+  };
+
+  static propTypes = {
+    navigation: PropType.shape({ navigate: PropType.func }).isRequired,
   };
 
   async componentDidMount() {
@@ -48,6 +43,11 @@ export default class Main extends Component {
       AsyncStorage.setItem('users', JSON.stringify(users));
     }
   }
+
+  handleNavigate = user => {
+    const { navigation } = this.props;
+    navigation.navigate('User', { user });
+  };
 
   handleAddUser = async () => {
     const { users, newUSer } = this.state;
@@ -69,7 +69,7 @@ export default class Main extends Component {
         newUSer: '',
       });
     } catch (error) {
-      console.tron.log('Erro ao recuperar usuário');
+      console.tron.error('Erro ao recuperar usuário');
     }
 
     this.setState({
@@ -79,10 +79,8 @@ export default class Main extends Component {
     Keyboard.dismiss();
   };
 
-  handleNavigate = user => {
-    const { navigation } = this.props;
-
-    navigation.navigate('User', { user });
+  static navigationOptions = {
+    title: 'Usuários',
   };
 
   render() {
