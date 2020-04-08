@@ -18,7 +18,9 @@ import {
 export default function SignIn({ navigation }) {
   const passwordRef = useRef();
 
-  function handleSubmit() {}
+  function handleSubmit() {
+    console.tron.log('handleSubmit: SignIn');
+  }
 
   return (
     <Background>

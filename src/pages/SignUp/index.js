@@ -19,7 +19,9 @@ export default function SignUp({ navigation }) {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  function handleSubmit() {}
+  function handleSubmit() {
+    console.tron.log('handleSubmit: SignUp');
+  }
 
   return (
     <Background>
