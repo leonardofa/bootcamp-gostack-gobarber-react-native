@@ -19,7 +19,7 @@ export default function SignIn({ navigation }) {
   const passwordRef = useRef();
 
   function handleSubmit() {
-    console.tron.log('handleSubmit: SignIn');
+    console.tron.log('⏱ handleSubmit: SignIn');
   }
 
   return (
