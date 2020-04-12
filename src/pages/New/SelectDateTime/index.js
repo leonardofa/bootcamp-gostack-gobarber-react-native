@@ -17,7 +17,6 @@ export default function SelectDateTime({ navigation }) {
 
   useEffect(() => {
     async function loadAvailable() {
-      console.tron.log('loadAvailable');
       const response = await api.get(`providers/${provider.id}/available`, {
         params: { date: date.getTime() },
       });
