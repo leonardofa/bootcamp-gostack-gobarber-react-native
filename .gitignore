@@ -104,5 +104,6 @@ dist
 .tern-port
 
 .gradle/
-android/
+android/gradlew*
+android/app/build
 ios/
