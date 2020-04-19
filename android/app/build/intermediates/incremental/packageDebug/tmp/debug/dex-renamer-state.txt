@@ -1,0 +1,4 @@
+#Sun Apr 19 12:26:51 BRT 2020
+base.0=/home/leonardo/Rocketseat/Gostack/bootcamp-gostack-gobarber-react-native/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
