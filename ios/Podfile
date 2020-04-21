@@ -36,7 +36,7 @@ target 'reactnativeapp' do
 
 
 
-  pod 'react-native-onesignal', :path => '../node_modules/react-native-onesignal'
+
 
   target 'reactnativeappTests' do
     inherit! :search_paths
